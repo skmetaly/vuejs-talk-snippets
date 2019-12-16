@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app-3">
+  <span v-if="seen">Now you see me</span>
+  <div v-text="'hello ' + user.firstName + ' ' + user.lastName"></div>
+</div>
+<script>
+  new Vue({
+    el: '#app-3',
+    data: {
+      seen: true,
+      user: {
+        firstName: 'Jadu',
+        lastName: 'inc'
+      }
+    }
+  })
+</script>
+</body>
+</html>

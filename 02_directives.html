@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<!--
+A Vue.js directive can only appear in the form of a prefixed HTML attribute that takes the following format:
+
+<element
+  prefix-directiveId="[argument:] expression [| filters...]">
+</element>
+ -->
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+<script>
+  new Vue({
+    el: '#app-2',
+    data: {
+      message: 'You loaded this page on ' + new Date().toLocaleString()
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app-5">
+  <p>Hi {{ name | fallback }}!</p>
+</div>
+<script>
+  new Vue({
+    el: '#app-5',
+    data: {
+      name: 'Jadu'
+    },
+    filters: {
+      fallback: function(name) {
+        return name ? name : 'there'
+      }
+    }
+  })
+</script>
+</body>
+</html>

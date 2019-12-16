@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="example">
+  <button v-on:click="greet">Greet</button>
+</div>
+<script>
+  new Vue({
+    el: '#example',
+    data: {
+      name: 'Vue.js'
+    },
+    // define methods under the `methods` object
+    methods: {
+      greet: function (event) {
+        // `this` inside methods point to the Vue instance
+        alert('Hello ' + this.name + '!')
+        // `event` is the native DOM event
+        alert(event.target.tagName)
+      }
+    }
+  })
+</script>
+</body>
+</html>
