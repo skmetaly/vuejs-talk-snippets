@@ -16,21 +16,22 @@
     el: '#example',
     data: {
       name: 'Vue.js',
-      messageForMethod: 'This message will be reversed'
+      message: 'This message will be reversed'
     },
     computed: {
       reverseMessageComputed: function() {
-        alert('reverse computed was called');
-        return this.messageForMethod.split('').reverse().join('')
+        console.log('i will only be called one!');
+        return this.message.split('').reverse().join('')
       }
     },
     methods: {
       reverseMessage: function () {
-        alert('reverse function was called');
-        return this.messageForMethod.split('').reverse().join('')
+        console.log('i will be executed on each call');
+        return this.message.split('').reverse().join('')
       }
     }
   })
 </script>
 </body>
 </html>
+
